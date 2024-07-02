@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+    body{
+    font-family: "Montserrat", sans-serif;
+    background-color: black;
+    color: white;
+    }
+    form{
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    gap: 10px;
+    }
+    button{
+    background-color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 5px;
+    height: 20px;
+    font-weight: 500;
+    width: 200px;
+    }
+    input{
+    background-color: rgb(255, 255, 255);
+    border: none;
+    padding-left: 10px;
+    height: 20px;
+    border-radius: 5px;
+    }
+    .table{
+    margin-top: 50px;
+    }
+    </style>
+    <title>SignUp</title>
+</head>
+<body>
+    <h1>SignUp</h1>
+
+    <form action="/user" method="POST">
+        <label>Enter Your Full Name</label>
+        <input type="text" name="name" />
+        <label>Email</label>
+        <input type="text" name="email" />
+        <label>Password</label>
+        <input type="text" name="password" />
+        <button type="submit">Sign Up</button>
+    </form>
+</body>
+</html>
