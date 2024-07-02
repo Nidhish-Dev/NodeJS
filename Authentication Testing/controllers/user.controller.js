@@ -1,0 +1,25 @@
+const User = require('../models/user.model')
+
+async function handleSignup(req,res){
+    const {name,email,password} = req.body;
+await User.create({
+    name,
+    email,
+    password,
+})
+
+return res.redirect("/home")
+}
+async function handleLogin(req,res){
+const {email, password} = req.body;
+const user =  await User.findOne({email, password})
+   if(!user) return res.render("login", {
+    error: "Invalid username or password"
+   })
+    return res.redirect("/home")
+}
+
+module.exports = {
+    handleSignup,
+    handleLogin
+}
